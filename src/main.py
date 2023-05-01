@@ -65,12 +65,12 @@ class ClusterWorldSearch:
 
         time.sleep(1)
         if user_id:
-            events = events_created_by(user_id)['events']
-            friends = user_friends(user_id)['users']
-            worlds = worlds_created_by(user_id)['worlds']
-            num_events = len(events)
-            num_friends = len(friends)
-            num_worlds = len(worlds)
+            events_resp = events_created_by(user_id)
+            friends_resp = user_friends(user_id)
+            worlds_resp = worlds_created_by(user_id)
+            num_events = len(events_resp['events']) if 'events' in events_resp else None
+            num_friends = len(friends_resp['users']) if 'users' in friends_resp else None
+            num_worlds = len(worlds_resp['worlds']) if 'worlds' in worlds_resp else None
         else:
             num_worlds = num_events = num_friends = None
 
