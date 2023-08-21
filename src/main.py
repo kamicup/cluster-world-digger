@@ -115,7 +115,7 @@ class ClusterWorldSearch:
                         item['creator']['shareUrl'],
                         item['creator']['displayName'],
                         item['creator']['username'],
-                        item['creator']['isBeginner'],
+                        item['creator']['rank'],
                         item['creator']['isCertified'],
                         item['creator']['isDeleted'],
                         num_worlds,
